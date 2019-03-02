@@ -27,3 +27,15 @@ Route::get('about/directions', function(){
 Route::any('submit-form', function(){
 	return 'Process Form';
 });
+
+Route::get('about/{theSubject}', function($theSubject){
+	return $theSubject. 'content goes here';
+});
+
+Route::get('about/{Price}/{Art}', function($Price, $Art){
+	return $Price . ' ' . $Art;
+});
+
+Route::get('where', function(){
+	return Redirect::to('about/directions');
+});
